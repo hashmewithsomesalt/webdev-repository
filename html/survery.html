@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1> Product Review Questionnaire</h1>
+    <p>Your response will be kept confidential.</p>
+    <form action="/submit-survey" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="rating">How would you rate the product?</label><br>
+        <select id="rating" name="rating" required>
+            <option value="">Select a rating</option>
+            <option value="1">1 - Very Poor</option>
+            <option value="2">2 - Poor</option>
+            <option value="3">3 - Average</option>
+            <option value="4">4 - Good</option>
+            <option value="5">5 - Excellent</option>
+        </select><br><br>
+        <label for="favorite-feature">What feature do you like the most?</label><br>
+        <input type="radio" id="feature1" name="favorite-feature" value="Performance" required>
+        <label for="feature1">Performance</label><br>
+        <input type="radio" id="feature2" name="favorite-feature" value="User Interface">
+        <label for="feature2">User Interface</label><br>
+        <input type="radio" id="feature3" name="favorite-feature" value="Documentation">
+        <label for="feature3">Documentation</label><br>
+        <input type="radio" id="feature4" name="favorite-feature" value="Customer Support">
+        <label for="feature4">Customer Support</label><br><br>
+
+        <label for="feedback">Additional Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
